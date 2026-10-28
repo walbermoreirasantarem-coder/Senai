@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    </head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let dadoAluno = [];
+    let sair = "n";     
+                
+    while(sair.toLowerCase() === "n"){
+        console.log("Bem vindo ao sistema!");
+        alert("Bem vindo ao sistema!");
+        let iniciar = prompt("Cadastrar aluno - 1 \n Editar cadastro - 2 \n Sair - 3");
+        if (iniciar === "1"){
+            let nome = (prompt("Insira o nome do aluno: "));
+            let matricula = (parseInt (prompt("Insira a matrícula: ")));
+            let nota1 = (parseInt (prompt("Insira a nota 1: ")));
+            let nota2 = (parseInt (prompt("Insira a nota 2: ")));
+                dadoAluno.push([nome, matricula, nota1, nota2]);
+                console.log("Alunos cadastrados com sucesso! "+ dadoAluno);
+                alert("Alunos cadastrados com sucesso! "+ dadoAluno);
+                    sair = prompt("Deseja sair do sistema? Digite 's' ou 'n'");}                    
+                        
+            else if (iniciar === "2"){
+                console.log("editar cadastro de aluno");
+                alert("editar cadastro de aluno");
+                let editAluno = prompt("digite o nome do aluno que deseja alterar: ");
+                let posição = -1
+                for(i = 0; i <= dadoAluno.length; i++){
+                    if (dadoAluno[i][0] === editAluno.toLowerCase()){
+                        posicao = i
+                        break;}
+
+                    else{
+                        console.log("aluno não encontrado")
+                        alert("aluno não encontrado")}}
+                        let sair2 = "s"
+                        while(sair2.toLowerCase() === "s"){
+                            if (posicao !== -1){    
+                                let alteracao = prompt("o que deseja alterar? \n Matrícula - 1  \n Nota1 - 2 \n  nota2 - 3 \n Sair - 4");
+                                    if(alteracao === "1"){
+                                        console.log("matrícula antiga: " + dadoAluno[posicao][1])
+                                        alert("matrícula antiga: " + dadoAluno[posicao][1])
+                                        let novaMatricula = (parseInt(prompt("digite a nova matricula: ")));
+                                        dadoAluno[posicao][1] = novaMatricula
+                                        console.log("matrícula nova: " + dadoAluno[posicao][1] + "\n matricula alterada com sucesso!")
+                                        alert("matrícula nova: " + dadoAluno[posicao][1] + "\n matricula alterada com sucesso!")}
+                                        
+                                                    
+                                    else if(alteracao === "2"){
+                                        let novanota1 = (parseInt(prompt("digite a nova nota 1: ")));
+                                        dadoAluno = [posicao][2] = novanota1
+                                        console.log("nota1 nova: " + dadoAluno[posicao][2] + "\n nota1 alterada com sucesso!")
+                                        alert("nota1 nova: " + dadoAluno[posicao][2] + "\n nota1 alterada com sucesso!")}
+
+                                    else if(alteracao === "3"){
+                                        let novanota2 = (parseInt(prompt("digite a nova nota2: ")));
+                                        dadoAluno = [posicao][3] = novanota2
+                                        console.log("nota2 nova: " + dadoAluno[posicao][3] + "\n nota2 alterada com sucesso!")
+                                        alert("nota2 nova: " + dadoAluno[posicao][3] + "\n nota2 alterada com sucesso!")}
+                                                        
+                                    else{
+                                        sair2 = prompt("Deseja alterar outro dado? \n Sim - s\n Não - n");}}
+
+                                                        
+                            else{
+                                console.log("aluno não encontrado!") 
+                                alert("aluno não encontrado!") }  
+
+                            }}
+
+            else {
+                sair = prompt("Deseja sair do sistema? Digite 's' ou 'n'");}    
+            }
+
+console.log("===sistema encerrado===");
+alert("===sistema encerrado===");
+
+    </script>

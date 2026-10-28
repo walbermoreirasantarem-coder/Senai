@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let sair = "s";
+    let iniciar = "s"
+    console.log("====== Calculadora ======");
+    
+
+while (iniciar.toLowerCase() == "s"){
+    iniciar = prompt("deseja iniciar? S - sim \n N - não")    
+    while(sair.toLowerCase() === "s"){
+
+        let n1 = prompt("Qual é o primeiro valor? ");
+        n1 = parseInt(n1);
+
+        console.log("Primeiro numero: " + n1);
+
+        let operacao = prompt("Soma: + \n Subtração: - \n Divisão: / \n Multiplicação: *");
+        //operacao = parseInt(operacao);
+
+    if (operacao !== "+" && operacao !== "-" && operacao !== "/" && operacao !== "-") {
+            console.log("Opção não encontrada")
+            sair = prompt("deseja continuar? \n 'S'= sim 'N'= não");
+
+        } else {
+
+            let n2 = prompt("Qual é o segundo valor? ");
+            n2 = parseInt(n2);
+
+            console.log("Segundo numero: " + n2);
+
+            switch(operacao){
+                case "+": 
+                console.log("Resultado da soma: " + (n1 + n2));
+                break;
+
+                case "-": 
+                console.log("Resultado da soma: " + (n1 - n2));
+                break;
+                
+                case "/": 
+                console.log("Resultado da soma: " + (n1 / n2));
+                break;
+                
+                case "*": 
+                console.log("Resultado da soma: " + (n1 * n2)); 
+                break;
+                
+                default:
+                    console.log("Opção não encontrada")
+                    sair = prompt("deseja continuar? \n 'S'= sim 'N'= não");
+                    break;
+            }}
+            
+            sair = prompt("deseja continuar? \n 'S'= sim 'N'= não");
+            console.log("calculadora encerrada.")
+        }
+    }
+    
+    </script>

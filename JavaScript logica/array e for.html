@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<body>
+    
+<script>
+// "aula dia 15/09"
+
+// let aluno_idade = [
+// ["Ana", 15], 
+// ["Léo", 16 ],
+// ["maria",15],
+// ["João", 17]
+//  ]
+// // let nome = ""
+// //let idade = 0
+
+//  for(let i = 0;  i < aluno_idade.length; i++){ 
+ 
+//      // if (i % 2 == 0){
+//      //     aluno = aluno_idade[i]
+//      // }
+
+//      // else{
+//      //     idade = aluno_idade[i]
+//  console.log(aluno_idade[i][0] + " tem " + aluno_idade[i][1] + " anos")
+
+        
+ //}
+let sair = "n";
+let dadoAluno = []
+
+while(sair.toLowerCase() === "n"){
+let iniciar = prompt("bem vindo ao sistema \n cadastrar - 1\n alterar - 2\n sair = 3");
+    if (iniciar === "1"){
+        let nome = prompt("nome");
+        let matricula = parseInt(prompt("matrícula"));
+        let nota1 = parseInt(prompt("nota1"));
+        let nota2 = parseInt(prompt("nota2"));
+        dadoAluno.push([nome, matricula, nota1, nota2]);
+            alert("aluno cadastrado com sucesso" + dadoAluno);
+        sair = prompt("deseja sair do sistema? \n s \n n")  }
+
+else if (iniciar === "2"){
+        if(dadoAluno.length == 0){
+        sair = prompt("sem dados no sistema; deseja sair? \n s \n n") 
+    
+        }else{
+            let editAluno = prompt("Digite o nome do aluno que você deseja alterar.");
+            let posicao = -1
+            for (let i = 0; i < dadoAluno.length; i++) {
+                if (dadoAluno[i][0] === editAluno){
+                    alert("Aluno encontrado.")
+                posicao = i
+                break;
+                
+            }}
+            if(posicao != -1){
+            let dadosAlt = prompt("O que dese   ja alterar? \n 1- Matrícula \n 2- nota1 \n 3- nota2")
+                if (dadoAlt = "1"){
+                    let novaMatri = prompt("digite a nova matrícula");
+                    dadoAluno[posicao][1] = novaMatri;
+                    alert("nova nota do aluno" + dadoAluno[posicao][1]);
+                }
+                else if (dadoAlt = "2"){
+                    let novanota1 = prompt("digite a nova nota1")
+                    dadoAluno[posicao][2] = novanota1
+                    alert("nova nota do aluno" + dadoAluno[posicao][2])
+                }
+
+                else {
+                
+                    let novanota1 = prompt("digite a nova nota1")
+                    dadoAluno[posicao][2] = novanota1
+                    alert("nova nota do aluno" + dadoAluno[posicao][2])
+                }}
+
+                    
+
+            }
+            }
+
+        
+    
+    
+
+}else{
+break;    
+
+}
+}
+alert("====sistema finalizado====")    
+    
+
+</script>

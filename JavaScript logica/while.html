@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<body>
+    
+<script>
+        
+        // "aula 16/09"
+
+// const senha_correta = "1234"
+// let senhas = ["4567", "abc", "1234" ];
+// let i = 0;
+
+// while(senhas[i] !== senha_correta){
+//     console.log(senhas[i] + " incorreta")
+//     i++;}
+
+    // console.log("senha correta")
+
+// let parar = 0;
+// while (parar < 10){
+//     console.log("está no while!");
+//     console.log(parar * 2);
+//     parar++
+// }
+//     console.log("fim");
+
+// let x = true;
+// let num = 0
+// while(x){
+//     console.log("está no while!")
+//     num++
+    
+//     if(num >= 10){
+//         x=false
+// }}
+
+// console.log("fim")
+
+//gerar um número aleatório de 1 a 10
+
+//const numeroSecreto = Math.floor(Math.random() * 10) + 1;
+
+// console.log("===jogo iniciado===");
+// console.log("escolha entre 1 e 10");
+
+// let continuar = "s";
+// while(continuar.toLowerCase() === "s"){
+// //pede palpite do usuário através de uma caixa de diálogo no navegador
+//     let palpite = prompt("qual é o palpite? (de 1 a 10)");
+
+//     palpite = parseInt(palpite);
+
+//     if (palpite === numeroSecreto){
+//         console.log("parabéns! vc acertou:" + numeroSecreto)
+//         break;
+//         }
+//     else{
+//         console.log("errou! Seu palpite foi: " + palpite)
+//     }
+//         continuar = prompt("deseja continuar? 'S'=sim 'N'=não")   
+    
+// }
+//     console.log("====fim de jogo====")
+ 
+let sair = "s";
+
+while(sair.toLowerCase() === "s"){
+
+    console.log("====== Calculadora ======");
+
+    let n1 = prompt("Qual é o primeiro valor? ");
+    n1 = parseInt(n1);
+
+    console.log("Primeiro numero: " + n1);
+ 
+    let operacao = prompt(" 1 - Soma \n 2 - Subtração \n 3 - Divisão \n 4 - Multiplicação");
+    operacao = parseInt(operacao);
+
+    let n2 = prompt("Qual é o segundo valor? ");
+    n2 = parseInt(n2);
+
+    console.log("Segundo numero: " + n2);
+
+    if (operacao == 1 ){
+        console.log("Resultado da soma: " + (n1 + n2));
+    }
+
+
+    else if (operacao == 2 ){
+        console.log("Resultado da subtração: " + (n1 - n2));
+    }
+
+    else if (operacao == 3 ){
+        console.log("Resultado da divisão: " + (n1 / n2));
+    }
+
+    else if (operacao == 4 ){
+        console.log("Resultado da multiplicação: " + (n1 * n2));
+    }
+
+    else {
+        console.log ("Opção não encontrada");
+    }
+
+    sair = prompt("deseja continuar? \n 'S'= sim 'N'= não");
+}
+// entrada = entrada.replace(/[^0-9]/g, "");
+ </script>
+
+

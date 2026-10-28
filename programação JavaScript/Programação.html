@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+// let nome = "Pedro"
+// let idade = 22
+// let habilitado = false
+
+// let total = 0
+// let total1 = 0
+
+// if (idade >= 30)
+//     total = 5
+
+// else if (idade >= 20)
+//     total = 10
+
+// else
+//     total = 0
+
+// if (habilitado)
+//    total1 = 10
+   
+
+// else 
+//     total1 = 0
+    
+
+// let total2 = total + total1
+
+// if (total2 < 15)
+// console.log(nome + " Não está qualificado para o serviço")
+    
+// else 
+//     console.log (nome + " está qualificado para o serviço")
+   
+
+// console.log(total)
+
+    // idade >= 30 = 5 pts
+    // idade >= 20 = 10
+    // <18 = 0pts
+    // habilitação = verdade +10
+    // saída: nome não está qualificado para o serviço se f
+    // caso contrário : está habilitado para o serviço
+
+    //exercício 1
+    // let idade = [12, 18, 25, 14, 30, 16, 42, 9];
+
+    //     for(let i=0; i<idade.length; i++)
+    //         if (idade[i]>=18){
+    //          console.log( "maior de idade")}
+
+    //          else{ 
+    //             console.log("menor de idade")
+    //          }
+//exercício 2
+    // let notas = [7.5, 8.0, 6.5, 9.0, 5.0];
+    // let soma = 0;
+    
+    //     for(let i = 0; i < notas.length; i++){
+    //         soma += notas[i]
+    //     }  
+    //         console.log("Total: " + soma)
+    //         console.log("Média: " + soma / notas.length)
+  
+    // //exercício 3
+    // let cardapio = ["Café", 5, "Pão de Queijo", 7, "Bolo", 10, "Suco", 8];
+    //     for(let i = 0; i<cardapio.length; i=i+2) {
+    //             console.log(cardapio[i] + " custa " + cardapio[i+1] + "") 
+    //         }
+
+    //exercício 4
+      
+    //   const valores = [34, 78, 12, 95, 4, 63, 89];
+    //   let maior = 0
+    //     for(let i = 0; i < valores.length; i++){
+    //         if (valores[i] > maior) {
+    //         maior = valores[i]}}
+    //          console.log(maior)
+        
+
+//exercício 5 
+
+//     let boletim = [
+//   ["Lucas", 8.5],
+//   ["Carla", 6.0],
+//   ["Renan", 7.0],
+//   ["Beatriz", 9.2],
+//   ["Marcos", 5.5]
+// ];
+
+// for (let i = 0; i<boletim.length; i++)
+//     if(boletim[i][1] >= 7){
+//         console.log(boletim[i][0] + boletim[i][1])
+//     }
+
+// const sc = "1234"
+// let tentativas = ["1294", "5678", "admin", "0000", "9999", "1234"]
+// let i = 0
+
+// while(tentativas[i] !== sc){
+//     console.log("senha " + tentativas[i] + " incorreta...tentando novamente.");
+//   i++  }
+   
+//     console.log("acesso permitido");
+
+
+let sair = "s";
+
+while(sair.toLowerCase() === "s"){
+
+    console.log("====== Calculadora ======");
+
+    let n1 = prompt("Qual é o primeiro valor? ");
+    n1 = parseInt(n1);
+
+    console.log("Primeiro numero: " + n1);
+
+    let operacao = prompt(" 1 - Soma \n 2 - Subtração \n 3 - Divisão \n 4 - Multiplicação");
+    operacao = parseInt(operacao);
+
+    if (operacao !== 1 && operacao !== 2 && operacao !== 3 && operacao !== 4) {
+        console.log("Opção não encontrada")
+        sair = prompt("deseja continuar? \n 'S'= sim 'N'= não");
+    } else {
+
+        let n2 = prompt("Qual é o segundo valor? ");
+        n2 = parseInt(n2);
+
+        console.log("Segundo numero: " + n2);
+
+        if (operacao == + ){
+            console.log("Resultado da soma: " + (n1 + operacao + n2));
+        }
+
+        else if (operacao == 2 ){
+            console.log("Resultado da subtração: " + (n1 - n2));
+        }
+
+        else if (operacao == 3 ){
+            console.log("Resultado da divisão: " + (n1 / n2));
+        }
+
+        else if (operacao == 4 ){
+            console.log("Resultado da multiplicação: " + (n1 * n2));
+        }
+
+        sair = prompt("deseja continuar? \n 'S'= sim 'N'= não");
+    }
+}
+
+</script>

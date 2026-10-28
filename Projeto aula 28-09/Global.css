@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+}
+
+main{  
+    display: flex;
+    flex-direction: column;
+    text-align: center;    ;
+    justify-content: center;
+    align-items: center;
+    margin: 0%; 
+    background-color: rgb(255, 249, 162);
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+h1{background-color: transparent;
+    border-radius: 20%;
+    
+}
+
+h2{background-color: red;
+    border-radius: 20%;
+}
+
+p{background-color: rgb(226, 50, 18);
+    size-adjust: 50PX;
+    
+}
+
+ul{
+    padding-top: 10%;
+    margin: 20px 0px;
+    list-style: none;
+}
+
+button{
+    padding: 30px 8px;
+    border-radius: 1px 50px 50px 47px;
+    margin-bottom: 10px;  
+    background-color: rgb(255, 255, 255);
+}
+
+img{
+    border-radius: 15%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+
+    
+}
+
+/* #contando{
+    background-color: rgb(255, 0, 0);
+     */
+}
